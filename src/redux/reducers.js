@@ -4,17 +4,12 @@ import { QUESTION_ANSWER, CHANGE_QUIZ, SUBMIT, INIT_QUIZZES } from './actions';
 function score(state = 0, action = {}) {
 	switch (action.type) {
 		case SUBMIT:
-			state=0
-			for (let quiz of action.payload){
-				if(quiz.userAnswer === undefined){  
-					quiz.userAnswer = '';
-				}
-				if(quiz.answer.toString().toLowerCase() === quiz.userAnswer.toString().toLowerCase()){
-					state+=1;
-				}
-
-			}
-			return state;
+			let result = 0;
+			action.payload.quizzes.map((quiz) => {
+				if (quiz.answer.trim().toLowerCase() === quiz.userAnswer.trim().toLowerCase())
+					result += 1;
+			})
+			return state = result;
 		default:
 			return state;
 	}

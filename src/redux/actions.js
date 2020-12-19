@@ -8,13 +8,23 @@ export function questionAnswer(index, answer) {
 }
 
 export function initQuizzes(quizzes) {
-	return { type: INIT_QUIZZES, payload: quizzes };
+	return {
+		type: INIT_QUIZZES,
+		payload: {
+			quizzes
+		}
+	};
 }
 
 export function submit(quizzes) {
-	return { type: SUBMIT, payload: quizzes};
+	return {
+		type: SUBMIT,
+		payload: {
+			quizzes
+		}
+	};
 }
 
 export function changeQuiz(index) {
-	return { type: CHANGE_QUIZ, payload: index};
+	return { type: CHANGE_QUIZ, payload: index };
 }

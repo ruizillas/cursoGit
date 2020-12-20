@@ -20,6 +20,8 @@ export default class Game extends React.Component {
 					onChange={(e) => this.props.onQuestionAnswer(e.target.value)} />
 
 
+				
+
 
 				<div >
 

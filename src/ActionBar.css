@@ -1,6 +1,6 @@
 .ActionBar{
     margin-top: 30px;
-    
+    text-align: center;
 }
 
 button{
@@ -32,4 +32,18 @@ button:disabled{
 
   #Submit{
       background-color: rgb(58, 59, 43);
+  }
+
+  .buttons{
+      margin-bottom: 60px;
+  }
+
+  span{
+      margin-top: 40px;
+      width: 500px;
+      background-color: ivory;
+      font-size: 24px;
+      border-radius: 15px;
+      height: 50px;
+      
   }

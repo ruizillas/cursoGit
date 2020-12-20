@@ -21,14 +21,17 @@ export class Game extends React.Component {
 
 					
 				</section>
-				<article class='imagenPregunta'>
+				<article class='Respuesta'>
 					<input type="text"
 					placeholder='Escriba su respuesta'
 					value={this.props.quiz.userAnswer || ''}
 					onChange={(e) => this.props.onQuestionAnswer(e.target.value)} />
 				</article>
 				<ActionBar onChangeQuiz={(n) => { this.props.dispatch(changeQuiz(this.props.currentQuiz + n)) }}
-					onSubmit={() => { this.props.dispatch(submit(this.props.quizzes)) }} />
+					onSubmit={() => { this.props.dispatch(submit(this.props.quizzes)) }}
+					 />
+				
+				
 
 			</div>
 		);

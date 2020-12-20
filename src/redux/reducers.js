@@ -34,17 +34,26 @@ function currentQuiz(state = 0, action = {}) {
 			switch (action.payload) {
 				case 0:
 					document.getElementById('Anterior').disabled = true;
+					
+				
 				case 9:
 					document.getElementById('Siguiente').disabled = true;
+					document.getElementById('Siguiente').style.backgroundColor= '#5F9EA0';
+					document.getElementById('Siguiente').style.boxShadow='none';
+					
 
 
 			}
 
 			if (action.payload !== 0) {
 				document.getElementById('Anterior').disabled = false;
+				
+				
+
 			}
 			if (action.payload !== 9) {
 				document.getElementById('Siguiente').disabled = false;
+				
 			}
 			return action.payload
 

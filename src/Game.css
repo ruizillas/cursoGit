@@ -1,11 +1,13 @@
 .Game{
-    background-color: blueviolet;
+    
     margin-top:0px;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
+    
 }
 input{
+    align-items: top;
 background: white;
 
 color: black;
@@ -23,17 +25,31 @@ resize: none;
 }
 
 #Imagen{
-    width: 350px;
-    height: 350px;
-    object-fit: contain;
+    width: 500px;
+
+    height: 400px;
+
+    object-fit: cover;
     border: 3px solid lightgrey;
     border-radius: 20px;
     margin: 2px;
+    align-content: left;
     
 }
 
 #santi{
    border-radius: 50%;
-   width: 10%;
+   width: 60px;
    object-position: left
+}
+
+.imagenPregunta{
+    align-content: left;
+    
+    
+}
+h1{
+    color: white;
+    align-content: left;
+    font-size: 40px;
 }

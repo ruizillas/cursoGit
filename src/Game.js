@@ -3,36 +3,41 @@ import './Game.css';
 import { connect } from 'react-redux';
 import ActionBar from './ActionBar';
 import { changeQuiz, submit } from './redux/actions';
-export  class Game extends React.Component {
+export class Game extends React.Component {
 	render() {
 		return (
 			<div className="Game">
 
 
-				<div class='fotoAutor'>
+				<section class='fotoAutor'>
 					<p>{this.props.quiz.author.profileName}</p>
 					<img id='santi' src={this.props.quiz.author.photo.url} alt='Caracola' />
 
-				</div>
-				<h1>{this.props.quiz.question}</h1>
-				<div>
+				</section>
+
+				<section class='imagenPregunta'>
+					<h1>{this.props.quiz.question}</h1>
 					<img id='Imagen' src={this.props.quiz.attachment.url} alt='Hola' />
-				</div>
-				<input type="text"
+
+					
+				</section>
+				<article class='imagenPregunta'>
+					<input type="text"
 					placeholder='Escriba su respuesta'
 					value={this.props.quiz.userAnswer || ''}
 					onChange={(e) => this.props.onQuestionAnswer(e.target.value)} />
-
+				</article>
 				<ActionBar onChangeQuiz={(n) => { this.props.dispatch(changeQuiz(this.props.currentQuiz + n)) }}
 					onSubmit={() => { this.props.dispatch(submit(this.props.quizzes)) }} />
+
 			</div>
 		);
 	}
 }
 function mapStateToProps(state) {
 	return {
-	  ...state
+		...state
 	};
-  }
-  
-  export default  connect(mapStateToProps)(Game);
+}
+
+export default connect(mapStateToProps)(Game);

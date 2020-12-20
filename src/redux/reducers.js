@@ -6,7 +6,7 @@ function score(state = 0, action = {}) {
 		case SUBMIT:
 			let result = 0;
 			for(let i=0;i<action.payload.length-1;i++){
-				if(action.payload[i].userAnswer === undefined){  //sustituimos las preguntas a las que no hayamos respondido por un string vacio para que no salte error.
+				if(action.payload[i].userAnswer === undefined){  
 					action.payload[i].userAnswer = '';
 				}
 				if(action.payload[i].answer.toString().toLowerCase() === action.payload[i].userAnswer.toString().toLowerCase()){

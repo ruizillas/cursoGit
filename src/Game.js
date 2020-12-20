@@ -9,9 +9,9 @@ export  class Game extends React.Component {
 			<div className="Game">
 
 
-				<div>
+				<div class='fotoAutor'>
 					<p>{this.props.quiz.author.profileName}</p>
-					<img height='50' width='50' src={this.props.quiz.author.photo.url} alt='Caracola' />
+					<img id='santi' src={this.props.quiz.author.photo.url} alt='Caracola' />
 
 				</div>
 				<h1>{this.props.quiz.question}</h1>

@@ -29,4 +29,11 @@ resize: none;
     border: 3px solid lightgrey;
     border-radius: 20px;
     margin: 2px;
+    
+}
+
+#santi{
+   border-radius: 50%;
+   width: 10%;
+   object-position: left
 }

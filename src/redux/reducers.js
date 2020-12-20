@@ -5,14 +5,14 @@ function score(state = 0, action = {}) {
 	switch (action.type) {
 		case SUBMIT:
 			let result = 0;
-			for(let i=0;i<action.payload.length-1;i++){
-				if(action.payload[i].userAnswer === undefined){  
+			for (let i = 0; i < action.payload.length - 1; i++) {
+				if (action.payload[i].userAnswer === undefined) {
 					action.payload[i].userAnswer = '';
 				}
-				if(action.payload[i].answer.toString().toLowerCase() === action.payload[i].userAnswer.toString().toLowerCase()){
+				if (action.payload[i].answer.toString().toLowerCase() === action.payload[i].userAnswer.toString().toLowerCase()) {
 					result++;
 				}
-		  }
+			}
 			return state = result;
 		default:
 			return state;
@@ -34,26 +34,25 @@ function currentQuiz(state = 0, action = {}) {
 			switch (action.payload) {
 				case 0:
 					document.getElementById('Anterior').disabled = true;
-					
-				
+
+
 				case 9:
 					document.getElementById('Siguiente').disabled = true;
-					document.getElementById('Siguiente').style.backgroundColor= '#5F9EA0';
-					document.getElementById('Siguiente').style.boxShadow='none';
-					
+
+
 
 
 			}
 
 			if (action.payload !== 0) {
 				document.getElementById('Anterior').disabled = false;
-				
-				
+
+
 
 			}
 			if (action.payload !== 9) {
 				document.getElementById('Siguiente').disabled = false;
-				
+
 			}
 			return action.payload
 

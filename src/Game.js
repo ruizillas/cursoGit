@@ -29,6 +29,7 @@ export class Game extends React.Component {
 				</article>
 				<ActionBar onChangeQuiz={(n) => { this.props.dispatch(changeQuiz(this.props.currentQuiz + n)) }}
 					onSubmit={() => { this.props.dispatch(submit(this.props.quizzes)) }}
+					score={this.props.score}
 					 />
 				
 				

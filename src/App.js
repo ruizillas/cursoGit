@@ -10,7 +10,8 @@ function App(props) {
   return (
     <div className= "App">
       <Game quiz={props.quizzes[props.currentQuiz]}
-      	onQuestionAnswer={(answer)=>{props.dispatch(questionAnswer(props.currentQuiz, answer))}}/>
+      	onQuestionAnswer={(answer)=>{props.dispatch(questionAnswer(props.currentQuiz, answer))}}
+        />
        
       
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './ActionBar.css'
-export default class Game extends React.Component {
+export default class ActionBar extends React.Component {
     render() {
         return (
             <div className="ActionBar">

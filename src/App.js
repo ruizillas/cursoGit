@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Game from "./Game";
 import Puntuacion from "./Puntuacion";
 import Lista from "./ListaQuizzes";
-import { questionAnswer } from './redux/actions';
+import { questionAnswer, changeQuiz, initQuizzes } from './redux/actions';
 //import GlobalState from './redux/reducers';
 
 class App extends Component {

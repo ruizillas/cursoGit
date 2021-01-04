@@ -5,15 +5,19 @@ function score(state = 0, action = {}) {
 	switch (action.type) {
 		case SUBMIT:
 			let result = 0;
-			for (let i = 0; i < action.payload.length - 1; i++) {
-				if (action.payload[i].userAnswer === undefined) {
+			let acertadas = [];
+			for (let i = 0; i < action.payload.quizzes.length; i++) {
+				/*if (action.payload[i].userAnswer === undefined) {
 					action.payload[i].userAnswer = '';
-				}
-				if (action.payload[i].answer.toString().toLowerCase() === action.payload[i].userAnswer.toString().toLowerCase()) {
-					result++;
+				}*/
+				if ((acertadas.includes(action.payload.quizzes[i]) === false) && String(action.payload.quizzes[i].answer).toLowerCase() === String(action.payload.quizzes[i].userAnswer).toLowerCase()) {
+					//result++;
+					//state = state + 1;
+					acertadas.push(action.payload.quizzes[i]);
 				}
 			}
-			return state = result;
+			state = acertadas.length;
+			return state;
 		default:
 			return state;
 	}
@@ -73,6 +77,7 @@ function quizzes(state = [], action = {}) {
 				}
 			})
 		case INIT_QUIZZES:
+			document.getElementById('Anterior').disabled = true;
 			return state = action.payload.quizzes
 		default:
 			return state;
